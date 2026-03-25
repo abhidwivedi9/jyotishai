@@ -89,6 +89,6 @@ Respond ONLY with valid JSON.`;
 app.get('/health', (req, res) => res.json({ status: 'ok', timestamp: new Date().toISOString() }));
 
 // Catch-all
-app.get('*', (req, res) => res.sendFile(path.join(__dirname, '../frontend/index.html')));
+app.get('*', (req, res) => res.sendFile(path.join(__dirname, 'index.html')));
 
 app.listen(PORT, () => console.log(`🔯 JyotishAI running on http://localhost:${PORT}`));
