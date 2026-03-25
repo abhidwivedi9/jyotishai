@@ -1,0 +1,19 @@
+# render.yaml — Free deployment on Render.com
+# Push this to your GitHub repo, then connect to Render
+
+services:
+  - type: web
+    name: jyotishai
+    env: node
+    region: singapore   # Closest to India
+    plan: free          # FREE tier — sleeps after 15 min inactivity
+    buildCommand: cd backend && npm install
+    startCommand: cd backend && node server.js
+    envVars:
+      - key: ANTHROPIC_API_KEY
+        sync: false      # Set manually in Render dashboard
+      - key: PORT
+        value: 10000     # Render uses port 10000
+      - key: NODE_ENV
+        value: production
+    healthCheckPath: /health
