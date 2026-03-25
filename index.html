@@ -1,9 +1,9 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-<title>JyotishAI — Kundali & Career Oracle</title>
+<title>JyotishAI â€” Kundali & Career Oracle</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Syne:wght@400;500;600;700&display=swap" rel="stylesheet"/>
 <style>
 :root {
@@ -31,7 +31,7 @@ body{
   overflow-x:hidden;
 }
 
-/* ── Stars background ── */
+/* â”€â”€ Stars background â”€â”€ */
 body::before{
   content:'';
   position:fixed;inset:0;
@@ -45,10 +45,10 @@ body::before{
 .star{position:absolute;background:#fff;border-radius:50%;animation:twinkle var(--d,3s) ease-in-out infinite var(--del,0s)}
 @keyframes twinkle{0%,100%{opacity:var(--min,0.1)}50%{opacity:var(--max,0.9)}}
 
-/* ── Layout ── */
+/* â”€â”€ Layout â”€â”€ */
 .wrap{position:relative;z-index:1;max-width:900px;margin:0 auto;padding:2rem 1.5rem 4rem}
 
-/* ── Header ── */
+/* â”€â”€ Header â”€â”€ */
 header{text-align:center;padding:3rem 0 2rem;position:relative}
 .brand-symbol{
   width:72px;height:72px;margin:0 auto 1.5rem;
@@ -77,7 +77,7 @@ h1{
 .divider::before,.divider::after{content:'';flex:1;height:1px;background:var(--border)}
 .divider span{color:var(--gold);font-size:0.9rem;opacity:0.7}
 
-/* ── Form card ── */
+/* â”€â”€ Form card â”€â”€ */
 .card{
   background:linear-gradient(135deg,rgba(255,255,255,0.04) 0%,rgba(255,255,255,0.01) 100%);
   border:1px solid var(--border);border-radius:16px;
@@ -111,7 +111,7 @@ h1{
 .field select option{background:var(--indigo);color:var(--cream)}
 .full{grid-column:1/-1}
 
-/* ── Rashis grid ── */
+/* â”€â”€ Rashis grid â”€â”€ */
 .rashi-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0.5rem;margin-top:0.5rem}
 .rashi-btn{
   background:rgba(255,255,255,0.04);border:1px solid var(--border);
@@ -123,7 +123,7 @@ h1{
 .rashi-btn.active{background:rgba(201,150,58,0.2);border-color:var(--gold);color:var(--gold-light)}
 .rashi-symbol{font-size:1.1rem;display:block;margin-bottom:2px}
 
-/* ── CTA Button ── */
+/* â”€â”€ CTA Button â”€â”€ */
 .cta-wrap{margin-top:2rem;display:flex;gap:1rem;flex-wrap:wrap}
 .btn-primary{
   flex:1;min-width:200px;
@@ -145,7 +145,7 @@ h1{
 .btn-primary:hover .shine{animation:shine 0.6s ease forwards}
 @keyframes shine{to{transform:translateX(200%)}}
 
-/* ── Loading ── */
+/* â”€â”€ Loading â”€â”€ */
 .loading-state{
   text-align:center;padding:3rem 1rem;
   display:none;flex-direction:column;align-items:center;gap:1rem;
@@ -160,7 +160,7 @@ h1{
 @keyframes spin{to{transform:rotate(360deg)}}
 .loading-msg{font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-light);font-style:italic}
 
-/* ── Results ── */
+/* â”€â”€ Results â”€â”€ */
 #results{margin-top:2rem;display:none}
 #results.show{display:block;animation:fadeUp 0.6s ease}
 @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
@@ -242,7 +242,7 @@ h1{
 }
 .error-msg.show{display:block}
 
-/* ── Nakshatra wheel decoration ── */
+/* â”€â”€ Nakshatra wheel decoration â”€â”€ */
 .wheel-wrap{text-align:center;margin:1.5rem 0}
 .wheel-wrap svg{max-width:280px;width:100%;opacity:0.6}
 
@@ -261,18 +261,18 @@ h1{
 
 <div class="wrap">
   <header>
-    <div class="brand-symbol">🔯</div>
+    <div class="brand-symbol">ðŸ”¯</div>
     <h1>JyotishAI</h1>
-    <p class="subtitle">Vedic Astrology · AI Career Oracle · Life Path Guidance</p>
-    <div class="divider"><span>✦</span></div>
+    <p class="subtitle">Vedic Astrology Â· AI Career Oracle Â· Life Path Guidance</p>
+    <div class="divider"><span>âœ¦</span></div>
     <p style="font-family:'Cormorant Garamond',serif;font-size:1.05rem;color:rgba(245,233,200,0.7);font-style:italic;max-width:500px;margin:0 auto">
-      Ancient cosmic wisdom meets modern artificial intelligence — discover your destined career path
+      Ancient cosmic wisdom meets modern artificial intelligence â€” discover your destined career path
     </p>
   </header>
 
   <!-- Input Form -->
   <div class="card" id="form-card">
-    <div class="card-title">🪐 Your Birth Details</div>
+    <div class="card-title">ðŸª Your Birth Details</div>
     <div style="display:grid;gap:1rem">
       <div class="grid-2">
         <div class="field">
@@ -296,20 +296,20 @@ h1{
       </div>
 
       <div class="field">
-        <label>Select Your Rashi (Moon Sign) — or we'll calculate it</label>
+        <label>Select Your Rashi (Moon Sign) â€” or we'll calculate it</label>
         <div class="rashi-grid" id="rashi-grid">
-          <button class="rashi-btn" data-rashi="Aries"><span class="rashi-symbol">♈</span>Mesh</button>
-          <button class="rashi-btn" data-rashi="Taurus"><span class="rashi-symbol">♉</span>Vrishabh</button>
-          <button class="rashi-btn" data-rashi="Gemini"><span class="rashi-symbol">♊</span>Mithun</button>
-          <button class="rashi-btn" data-rashi="Cancer"><span class="rashi-symbol">♋</span>Karka</button>
-          <button class="rashi-btn" data-rashi="Leo"><span class="rashi-symbol">♌</span>Simha</button>
-          <button class="rashi-btn" data-rashi="Virgo"><span class="rashi-symbol">♍</span>Kanya</button>
-          <button class="rashi-btn" data-rashi="Libra"><span class="rashi-symbol">♎</span>Tula</button>
-          <button class="rashi-btn" data-rashi="Scorpio"><span class="rashi-symbol">♏</span>Vrishchik</button>
-          <button class="rashi-btn" data-rashi="Sagittarius"><span class="rashi-symbol">♐</span>Dhanu</button>
-          <button class="rashi-btn" data-rashi="Capricorn"><span class="rashi-symbol">♑</span>Makar</button>
-          <button class="rashi-btn" data-rashi="Aquarius"><span class="rashi-symbol">♒</span>Kumbh</button>
-          <button class="rashi-btn" data-rashi="Pisces"><span class="rashi-symbol">♓</span>Meen</button>
+          <button class="rashi-btn" data-rashi="Aries"><span class="rashi-symbol">â™ˆ</span>Mesh</button>
+          <button class="rashi-btn" data-rashi="Taurus"><span class="rashi-symbol">â™‰</span>Vrishabh</button>
+          <button class="rashi-btn" data-rashi="Gemini"><span class="rashi-symbol">â™Š</span>Mithun</button>
+          <button class="rashi-btn" data-rashi="Cancer"><span class="rashi-symbol">â™‹</span>Karka</button>
+          <button class="rashi-btn" data-rashi="Leo"><span class="rashi-symbol">â™Œ</span>Simha</button>
+          <button class="rashi-btn" data-rashi="Virgo"><span class="rashi-symbol">â™</span>Kanya</button>
+          <button class="rashi-btn" data-rashi="Libra"><span class="rashi-symbol">â™Ž</span>Tula</button>
+          <button class="rashi-btn" data-rashi="Scorpio"><span class="rashi-symbol">â™</span>Vrishchik</button>
+          <button class="rashi-btn" data-rashi="Sagittarius"><span class="rashi-symbol">â™</span>Dhanu</button>
+          <button class="rashi-btn" data-rashi="Capricorn"><span class="rashi-symbol">â™‘</span>Makar</button>
+          <button class="rashi-btn" data-rashi="Aquarius"><span class="rashi-symbol">â™’</span>Kumbh</button>
+          <button class="rashi-btn" data-rashi="Pisces"><span class="rashi-symbol">â™“</span>Meen</button>
         </div>
       </div>
 
@@ -322,10 +322,10 @@ h1{
           <label>Years of Experience</label>
           <select id="experience">
             <option value="">Select...</option>
-            <option value="0-2">0–2 years (fresher)</option>
-            <option value="3-5">3–5 years</option>
-            <option value="6-10">6–10 years</option>
-            <option value="11-15" selected>11–15 years (senior)</option>
+            <option value="0-2">0â€“2 years (fresher)</option>
+            <option value="3-5">3â€“5 years</option>
+            <option value="6-10">6â€“10 years</option>
+            <option value="11-15" selected>11â€“15 years (senior)</option>
             <option value="15+">15+ years (veteran)</option>
           </select>
         </div>
@@ -340,7 +340,7 @@ h1{
     <div class="cta-wrap">
       <button class="btn-primary" id="generate-btn" onclick="generateKundali()">
         <span class="shine"></span>
-        ✨ Reveal My Kundali & Career Path
+        âœ¨ Reveal My Kundali & Career Path
       </button>
     </div>
     <div class="error-msg" id="error-msg"></div>
@@ -356,7 +356,7 @@ h1{
   <div id="results">
     <div class="result-header" id="result-header"></div>
     <div id="result-sections"></div>
-    <button class="pdf-btn" onclick="downloadPDF()">⬇ Download PDF Report</button>
+    <button class="pdf-btn" onclick="downloadPDF()">â¬‡ Download PDF Report</button>
   </div>
 </div>
 
@@ -394,7 +394,7 @@ const loadingMessages=[
   'Consulting Brihaspati (Jupiter) for career insights...',
   'Mapping your Dasha periods...',
   'Weaving cosmic wisdom with AI intelligence...',
-  'Almost ready — the stars are aligned...'
+  'Almost ready â€” the stars are aligned...'
 ];
 
 async function generateKundali(){
@@ -423,7 +423,7 @@ async function generateKundali(){
     document.getElementById('loading-msg').textContent=loadingMessages[msgIdx];
   },2200);
 
-  const prompt=`You are JyotishAI — an expert in both Vedic astrology (Jyotish) AND modern career counseling. You combine authentic astrological knowledge with practical, realistic career advice.
+  const prompt=`You are JyotishAI â€” an expert in both Vedic astrology (Jyotish) AND modern career counseling. You combine authentic astrological knowledge with practical, realistic career advice.
 
 USER DETAILS:
 - Name: ${name}
@@ -465,33 +465,25 @@ Generate a comprehensive Vedic Kundali + Career Guidance report. Structure your 
   "lucky_colors": ["Color1", "Color2"],
   "mantra": "A relevant Sanskrit mantra for career success",
   "mantra_meaning": "English meaning of the mantra",
-  "action_plan": "4-5 sentences of concrete, actionable career advice specifically tailored to their experience level and goals. This should be the MOST PRACTICAL section — real steps they can take this year.",
+  "action_plan": "4-5 sentences of concrete, actionable career advice specifically tailored to their experience level and goals. This should be the MOST PRACTICAL section â€” real steps they can take this year.",
   "special_yoga": "Name and description of any special planetary yoga in their chart that affects career (Raj Yoga, Gaj Kesari, etc.)"
 }
 
-IMPORTANT: Make it feel authentic — use real Jyotish terminology (Lagna, Dasha, Bhava, Graha, etc.) but also give genuinely useful career advice. The career advice should be practical and match their ${exp} years of experience. Respond ONLY with valid JSON.`;
+IMPORTANT: Make it feel authentic â€” use real Jyotish terminology (Lagna, Dasha, Bhava, Graha, etc.) but also give genuinely useful career advice. The career advice should be practical and match their ${exp} years of experience. Respond ONLY with valid JSON.`;
 
   try{
-    const res=await fetch('https://api.anthropic.com/v1/messages',{
+    const res=await fetch('/api/kundali',{
       method:'POST',
       headers:{'Content-Type':'application/json'},
-      body:JSON.stringify({
-        model:'claude-sonnet-4-20250514',
-        max_tokens:2000,
-        messages:[{role:'user',content:prompt}]
-      })
+      body:JSON.stringify({name,dob,tob,place,rashi:selectedRashi,career,experience:exp,goals})
     });
 
     clearInterval(msgInterval);
     const data=await res.json();
 
-    if(!res.ok){
-      throw new Error(data.error?.message||'API error');
-    }
+    if(!res.ok){throw new Error(data.error||'API error')}
 
-    let raw=data.content[0].text.trim();
-    raw=raw.replace(/```json|```/g,'').trim();
-    const r=JSON.parse(raw);
+    const r=data.data;
 
     renderResults(name,dob,place,r);
 
@@ -509,43 +501,43 @@ function renderResults(name,dob,place,r){
   // Header
   document.getElementById('result-header').innerHTML=`
     <div class="result-name">${name}</div>
-    <div class="result-meta">${dob} · ${place}</div>
+    <div class="result-meta">${dob} Â· ${place}</div>
     <div style="display:flex;justify-content:center;gap:1.5rem;margin-top:1.2rem;flex-wrap:wrap">
       <div style="text-align:center">
         <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:3px">Rashi</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-light)">${r.rashi||'—'}</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-light)">${r.rashi||'â€”'}</div>
       </div>
       <div style="width:1px;background:var(--border)"></div>
       <div style="text-align:center">
         <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:3px">Lagna</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-light)">${r.lagna||'—'}</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-light)">${r.lagna||'â€”'}</div>
       </div>
       <div style="width:1px;background:var(--border)"></div>
       <div style="text-align:center">
         <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:3px">Nakshatra</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-light)">${r.nakshatra||'—'}</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-light)">${r.nakshatra||'â€”'}</div>
       </div>
       <div style="width:1px;background:var(--border)"></div>
       <div style="text-align:center">
         <div style="font-size:0.65rem;letter-spacing:0.15em;text-transform:uppercase;color:var(--muted);margin-bottom:3px">Ruling Planet</div>
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-light)">${r.ruling_planet||'—'}</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.1rem;color:var(--gold-light)">${r.ruling_planet||'â€”'}</div>
       </div>
     </div>
     ${r.planets?`<div class="planets-row">${r.planets.map(p=>`<span class="planet-chip">${p}</span>`).join('')}</div>`:''}
-    ${r.special_yoga?`<div style="margin-top:1rem;padding:0.7rem 1.2rem;background:rgba(201,150,58,0.1);border:1px solid var(--border);border-radius:8px;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--gold-light)">⭐ ${r.special_yoga}</div>`:''}
+    ${r.special_yoga?`<div style="margin-top:1rem;padding:0.7rem 1.2rem;background:rgba(201,150,58,0.1);border:1px solid var(--border);border-radius:8px;font-family:'Cormorant Garamond',serif;font-size:0.95rem;color:var(--gold-light)">â­ ${r.special_yoga}</div>`:''}
   `;
 
   // Sections
   const sec=document.getElementById('result-sections');
   sec.innerHTML=`
     <div class="section-block">
-      <span class="section-icon">🌙</span>
+      <span class="section-icon">ðŸŒ™</span>
       <div class="section-heading">Personality & Cosmic Nature</div>
       <div class="prose">${r.personality||''}</div>
     </div>
 
     <div class="section-block">
-      <span class="section-icon">💼</span>
+      <span class="section-icon">ðŸ’¼</span>
       <div class="section-heading">Career Analysis from Your Chart</div>
       <div class="prose">${r.career_analysis||''}</div>
       ${r.ideal_careers?`
@@ -561,12 +553,12 @@ function renderResults(name,dob,place,r){
     </div>
 
     <div class="section-block">
-      <span class="section-icon">📅</span>
+      <span class="section-icon">ðŸ“…</span>
       <div class="section-heading">Yearly Forecast</div>
       <div class="yearly-grid">
         ${(r.yearly_forecast||[]).map(y=>`
           <div class="year-card">
-            <div class="year-label">${y.year} — ${y.label||''}</div>
+            <div class="year-label">${y.year} â€” ${y.label||''}</div>
             <div class="year-text">${y.text}</div>
           </div>
         `).join('')}
@@ -574,21 +566,21 @@ function renderResults(name,dob,place,r){
     </div>
 
     <div class="section-block">
-      <span class="section-icon">🎯</span>
+      <span class="section-icon">ðŸŽ¯</span>
       <div class="section-heading">Your Action Plan</div>
       <div class="prose">${r.action_plan||''}</div>
     </div>
 
     <div class="section-block">
-      <span class="section-icon">💎</span>
+      <span class="section-icon">ðŸ’Ž</span>
       <div class="section-heading">Cosmic Remedies & Lucky Elements</div>
-      ${r.lucky_gems?`<div style="margin-bottom:1rem"><div style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">Recommended Gemstones</div><div class="gem-row">${r.lucky_gems.map(g=>`<span class="gem gem-lucky">✓ ${g}</span>`).join('')}${(r.avoid_gems||[]).map(g=>`<span class="gem gem-avoid">✗ ${g}</span>`).join('')}</div></div>`:''}
+      ${r.lucky_gems?`<div style="margin-bottom:1rem"><div style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">Recommended Gemstones</div><div class="gem-row">${r.lucky_gems.map(g=>`<span class="gem gem-lucky">âœ“ ${g}</span>`).join('')}${(r.avoid_gems||[]).map(g=>`<span class="gem gem-avoid">âœ— ${g}</span>`).join('')}</div></div>`:''}
       <div style="display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:0.5rem">
-        ${r.lucky_numbers?`<div><div style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">Lucky Numbers</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold-light)">${r.lucky_numbers.join(' · ')}</div></div>`:''}
+        ${r.lucky_numbers?`<div><div style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">Lucky Numbers</div><div style="font-family:'Cormorant Garamond',serif;font-size:1.3rem;color:var(--gold-light)">${r.lucky_numbers.join(' Â· ')}</div></div>`:''}
         ${r.lucky_colors?`<div><div style="font-size:0.7rem;letter-spacing:0.12em;text-transform:uppercase;color:var(--gold);margin-bottom:0.5rem">Lucky Colors</div><div style="font-family:'Cormorant Garamond',serif;font-size:1rem;color:var(--gold-light)">${r.lucky_colors.join(', ')}</div></div>`:''}
       </div>
       ${r.mantra?`<div style="margin-top:1.2rem;padding:1rem 1.5rem;background:rgba(91,63,160,0.15);border:1px solid rgba(91,63,160,0.3);border-radius:8px;text-align:center">
-        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-light);margin-bottom:0.4rem">🕉 ${r.mantra}</div>
+        <div style="font-family:'Cormorant Garamond',serif;font-size:1.2rem;color:var(--gold-light);margin-bottom:0.4rem">ðŸ•‰ ${r.mantra}</div>
         <div style="font-size:0.8rem;color:var(--muted);font-style:italic">${r.mantra_meaning}</div>
       </div>`:''}
     </div>
@@ -611,7 +603,7 @@ async function downloadPDF(){
   const content=document.getElementById('results').innerText;
   const win=window.open('','_blank');
   win.document.write(`
-    <html><head><title>${name} — JyotishAI Report</title>
+    <html><head><title>${name} â€” JyotishAI Report</title>
     <style>
       body{font-family:Georgia,serif;max-width:700px;margin:40px auto;color:#1a1240;line-height:1.7}
       h1{color:#c9963a;font-size:2rem;text-align:center;margin-bottom:0.5rem}
@@ -621,8 +613,8 @@ async function downloadPDF(){
       @media print{body{margin:20px}}
     </style></head>
     <body>
-      <h1>🔯 JyotishAI Kundali Report</h1>
-      <div class="meta">Generated by JyotishAI — Vedic Astrology + AI Career Oracle</div>
+      <h1>ðŸ”¯ JyotishAI Kundali Report</h1>
+      <div class="meta">Generated by JyotishAI â€” Vedic Astrology + AI Career Oracle</div>
       <pre style="white-space:pre-wrap;font-family:Georgia,serif">${content}</pre>
       <script>window.print();setTimeout(()=>window.close(),1000)<\/script>
     </body></html>
@@ -631,3 +623,4 @@ async function downloadPDF(){
 </script>
 </body>
 </html>
+
